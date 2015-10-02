@@ -34,18 +34,18 @@ void setup()
     digitalWrite(inApin[i], LOW);
     digitalWrite(inBpin[i], LOW);
   }
-  // motorGo(0, CW, 1023);
-  // motorGo(1, CCW, 1023);
+  // motorGo(0, CW, 255);
+  // motorGo(1, CCW, 255);
 }
 
 void loop()
 {
-  motorGo(0, CW, 1023);
-  motorGo(1, CCW, 1023);
+  motorGo(0, CW, 255);
+  motorGo(1, CCW, 255);
   delay(500);
 
-  motorGo(0, CCW, 1023);
-  motorGo(1, CW, 1023);
+  motorGo(0, CCW, 255);
+  motorGo(1, CW, 255);
   delay(500);
   
   if ((analogRead(cspin[0]) < CS_THRESHOLD) && (analogRead(cspin[1]) < CS_THRESHOLD))
